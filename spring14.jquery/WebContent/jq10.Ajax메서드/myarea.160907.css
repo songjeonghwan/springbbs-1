@@ -1,0 +1,581 @@
+@charset "utf-8";
+body, p, h1, h2, h3, h4, h5, h6, menu, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select {
+    margin: 0;
+    padding: 0
+}
+
+body, input, textarea, select, button {
+    font-family: "돋움", Dotum, Helvetica, 'Apple SD Gothic Neo', Sans-serif;
+    font-size: 12px
+}
+
+select {
+    font-size: 12px
+}
+
+@-moz-document url-prefix() {
+    select {
+        padding: 1px
+    }
+}
+
+label {
+    cursor: pointer
+}
+
+img, fieldset {
+    border: 0
+}
+
+menu, ul, ol {
+    list-style: none
+}
+
+em, address {
+    font-style: normal
+}
+
+a, a:link {
+    text-decoration: none
+}
+
+a:hover, a:active, a:focus {
+    text-decoration: underline
+}
+
+textarea {
+    overflow: auto
+}
+
+option, x:-moz-any-link {
+    padding-right: 6px
+}
+
+option, x:-moz-any-link, x:default {
+    padding-right: 0
+}
+
+legend {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    font-size: 0;
+    line-height: 0
+}
+
+button {
+    cursor: pointer
+}
+
+.blind {
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 0;
+    background: none;
+    font-size: 0;
+    line-height: 0
+}
+
+.myservice .btn_close i, .edit_profile .btn_close i, .ly_alert .btn_close i, .svc_list .btn_remove i, .svc_banner .btn_close i, .profile .user_thumbnail .mask, .profile .private .login_on, .profile .private .set_login_protect, .profile .my_service span.dormant, .profile .my_service span.unknown_cnt, .profile .my_service .link_me i, .profile .my_service .link_mail i, .profile .my_service .link_note i, .profile .my_service .link_mysvc i, .bar, .profile .service_tab .btn_next i, .profile .service_tab li a i, .profile .service_tab .b_cnt, .profile .service_tab .b_cnt em, .svc_list .attach, .view_more .ico, .svc_navigation .svc_ico, .svc_navigation .btn_prev i, .svc_navigation .btn_next i, .svc_navigation .arr, .m .swipe_box button em, .svc_spot .b_cnt, .svc_spot .b_cnt em, .myservice .service_list .svc_icon, .svc_noti .ico_mail, .svc_mail .svc_list .subject, .svc_ndrive .svc_list .n_folder, .svc_cafe .svc_list li .thumb .mask, .svc_cafe .svc_list li .flag, .svc_cafe .btn_group .ico, .svc_cafe .btn_group.on .ico, .edit_profile .pf_img_cover .mask, .btn_white_small, .btn_white_small .inr, .btn_green_big, .btn_green_big .inr, .btn_white_big, .btn_white_big .inr, .svc_npay .svc_list .noti_task .thumb, .svc_npay .svc_list .noti_event .thumb, .svc_npay .svc_list .noti_partner .thumb, .svc_npay .svc_list .thumb .mask, .svc_npay .arrow_right {
+    background-image: url(http://static.naver.net/common/myarea/sp_myarea_160830_2.png);
+    background-repeat: no-repeat
+}
+
+.myservice .btn_close i, .edit_profile .btn_close i, .ly_alert .btn_close i, .svc_list .btn_remove i, .svc_banner .btn_close i, .profile .user_thumbnail i.mask, .profile .private i.login_on, .profile .private i.set_login_protect, .profile .my_service .link_me i, .profile .my_service .link_mail i, .profile .my_service .link_note i, .profile .my_service .link_mysvc i, i.bar, .profile .service_tab .btn_next i, .profile .service_tab li a i, .profile .service_tab i.b_cnt, .svc_list i.attach, .view_more i.ico, .svc_navigation i.svc_ico, .svc_navigation .btn_prev i, .svc_navigation .btn_next i, .svc_navigation i.arr, .svc_spot i.b_cnt, .myservice .service_list i.svc_icon, .svc_noti i.ico_mail, .svc_mail .svc_list i.subject, .svc_ndrive .svc_list i.n_folder, .svc_cafe .svc_list li .thumb i.mask, .svc_cafe .svc_list li i.flag, .svc_cafe .btn_group i.ico, .svc_cafe .btn_group.on i.ico, .edit_profile .pf_img_cover i.mask, i.btn_white_small, .btn_white_small i.inr, i.btn_green_big, .btn_green_big i.inr, i.btn_white_big, .btn_white_big i.inr, .svc_npay .svc_list .noti_task i.thumb, .svc_npay .svc_list .noti_event i.thumb, .svc_npay .svc_list .noti_partner i.thumb, .svc_npay .svc_list .thumb i.mask, .svc_npay i.arrow_right, .m .swipe_box button em, .svc_cafe .btn_group .ico {
+    font: 0/0 a;
+    color: transparent;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: top
+}
+
+.myservice .btn_close i, .edit_profile .btn_close i, .ly_alert .btn_close i, .svc_list .btn_remove i, .svc_banner .btn_close i, .profile .user_thumbnail .mask, .profile .private .login_on, .profile .private .set_login_protect, .profile .my_service span.dormant, .profile .my_service span.unknown_cnt, .profile .my_service .link_me i, .profile .my_service .link_mail i, .profile .my_service .link_note i, .profile .my_service .link_mysvc i, .bar, .profile .service_tab .btn_next i, .profile .service_tab li a i, .profile .service_tab .b_cnt, .profile .service_tab .b_cnt em, .svc_list .attach, .view_more .ico, .svc_navigation .svc_ico, .svc_navigation .btn_prev i, .svc_navigation .btn_next i, .svc_navigation .arr, .m .swipe_box button em, .svc_spot .b_cnt, .svc_spot .b_cnt em, .myservice .service_list .svc_icon, .svc_noti .ico_mail, .svc_mail .svc_list .subject, .svc_ndrive .svc_list .n_folder, .svc_cafe .svc_list li .thumb .mask, .svc_cafe .svc_list li .flag, .svc_cafe .btn_group .ico, .svc_cafe .btn_group.on .ico, .edit_profile .pf_img_cover .mask, .btn_white_small, .btn_white_small .inr, .btn_green_big, .btn_green_big .inr, .btn_white_big, .btn_white_big .inr, .svc_npay .svc_list .noti_task .thumb, .svc_npay .svc_list .noti_event .thumb, .svc_npay .svc_list .noti_partner .thumb, .svc_npay .svc_list .thumb .mask, .svc_npay .arrow_right, .profile .private .user_name, .profile .private .user_name a strong, .profile .private .btn_logout, .profile .private .btn_logout .btn_inr, .profile .my_service a, .profile .my_service .cnt, .profile .my_service .arrow, .profile .my_service .link_cover, .profile .service_tab .btn_next, .profile .service_tab ul, .profile .service_tab li, .profile .service_tab li a, .svc_navigation .btn_prev, .svc_navigation .btn_next, .svc_blank .svc_msg_box, .svc_blank .v_guide, .svc_banner .type_text a, .svc_banner .type_image a, .myservice .service_list li, .svc_mail .svc_head a.tit, .svc_feed .svc_head a.tit, .svc_ndrive .svc_head a.tit, .svc_calendar .svc_head a.tit, .svc_office .svc_head a.tit, .svc_cafe .svc_head a.tit, .svc_happybean .svc_head a.tit, .svc_happybean .my_hb, .svc_happybean .my_hb strong, .editing_cover .ipt_cover label {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1
+}
+
+.profile .private .user_name a strong, .svc_list .subject, .svc_cafe .btn_group .txt {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100%
+}
+
+.profile .my_service .cnt, .profile .service_tab .b_cnt em, .svc_navigation .cnt, .svc_spot .b_cnt em, .svc_happybean .my_hb strong {
+    font-family: tahoma, sans-serif;
+    font-size: 10px;
+    font-weight: bold
+}
+
+.profile .private .link_myinfo, .profile .private .btn_logout, .profile .my_service a, .svc_head .tit, .svc_head .task_right button, .svc_list .info, .view_more, .svc_navigation a, .svc_navigation .cnt, .myservice .service_list .svc_info, .svc_happybean .my_hb {
+    font-size: 11px;
+    letter-spacing: -1px
+}
+
+.myservice .btn_close, .edit_profile .btn_close, .ly_alert .btn_close {
+    border: 0;
+    background: none;
+    cursor: pointer;
+    border-radius: 0;
+    padding: 10px
+}
+
+.myservice .btn_close i, .edit_profile .btn_close i, .ly_alert .btn_close i {
+    width: 15px;
+    height: 15px;
+    background-position: -120px -40px
+}
+
+.nanum {
+    font-family: nanumgothic, '나눔고딕', sans-serif
+}
+
+.my_area {
+    position: relative;
+    zoom: 1;
+    width: 300px;
+    height: 100px
+}
+
+.profile {
+    position: relative;
+    z-index: 10;
+    zoom: 1;
+    border: 1px solid #dcdcdc;
+    border-bottom: 0;
+    height: 99px;
+    _width: 298px
+}
+
+.profile .user_area {
+    background-color: #f3f4f3;
+    border-bottom: 1px solid #dcdcdc;
+    height: 54px;
+    position: relative;
+    z-index: 10
+}
+
+.profile .user_info {
+    position: relative;
+    padding: 8px 0 4px 58px;
+    zoom: 1
+}
+
+.profile .user_thumbnail {
+    position: absolute;
+    left: 11px;
+    top: 5px;
+    width: 42px;
+    height: 42px;
+    overflow: hidden
+}
+
+.profile .user_thumbnail img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%
+}
+
+.profile .user_thumbnail .mask {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0
+}
+
+.profile .private {
+    margin-bottom: 5px;
+    line-height: 19px;
+    white-space: nowrap;
+    position: relative
+}
+
+.profile .private .user_name {
+    max-width: 90px;
+    *width: 90px;
+    vertical-align: middle;
+    position: relative;
+    overflow: hidden;
+    box-sizing: content-box;
+    margin-right: 6px
+}
+
+.profile .private .user_name a {
+    color: #2f3743;
+    font-weight: bold
+}
+
+.profile .private .user_name a:hover {
+    text-decoration: none
+}
+
+.profile .private .user_name a strong {
+    max-width: 79px;
+    *width: 79px;
+    vertical-align: top;
+    *vertical-align: middle
+}
+
+.profile .private .user_name a:hover strong {
+    text-decoration: underline
+}
+
+.profile .private .login_on {
+    width: 17px;
+    height: 11px;
+    margin: 4px 2px 0 0;
+    overflow: hidden;
+    background-position: -20px -340px;
+    vertical-align: top
+}
+
+.profile .private .link_myinfo {
+    color: #848688;
+    text-decoration: underline
+}
+
+.profile .private .set_login_protect {
+    width: 12px;
+    height: 18px;
+    background-position: -58px 4px;
+    vertical-align: top;
+    margin-left: -1px
+}
+
+.profile .private .btn_logout {
+    position: absolute;
+    right: 12px;
+    border: 1px solid #d1d1d1;
+    color: #848688;
+    height: 16px;
+    overflow: hidden;
+    vertical-align: top
+}
+
+.profile .private .btn_logout .btn_inr {
+    border: 1px solid #fff;
+    border-right: 0;
+    border-bottom: 0;
+    background-color: #f6f7f8;
+    padding: 0 4px 0;
+    height: 15px;
+    line-height: 15px;
+    vertical-align: top;
+    *line-height: 17px
+}
+
+.profile .my_service {
+    font-size: 0;
+    line-height: 15px;
+    white-space: nowrap
+}
+
+.profile .my_service a {
+    color: #390;
+    text-decoration: none !important;
+    vertical-align: top;
+    height: 16px;
+    cursor: pointer !important
+}
+
+.profile .my_service .cnt {
+    height: 15px;
+    vertical-align: top
+}
+
+.profile .my_service span.dormant, .profile .my_service span.unknown_cnt {
+    vertical-align: top;
+    position: relative;
+    top: 3px;
+    width: 19px;
+    height: 9px;
+    background-position: -160px -320px;
+    margin-left: 2px
+}
+
+.profile .my_service span.dormant i, .profile .my_service span.unknown_cnt i {
+    width: auto;
+    height: auto;
+    background: none;
+    margin: 0
+}
+
+.profile .my_service span.unknown_cnt {
+    background-position: -113px -300px
+}
+
+.profile .my_service .link_me {
+    padding: 0 10px 0 3px;
+    *padding-right: 9px
+}
+
+.profile .my_service .link_mysvc {
+    padding-left: 9px;
+    font-size: 0;
+    *padding-left: 8px
+}
+
+.profile .my_service .link_me i {
+    width: 29px;
+    height: 15px;
+    background-position: -80px 3px
+}
+
+.profile .my_service .link_mail i {
+    width: 19px;
+    height: 15px;
+    background-position: -116px 2px;
+    margin-right: 2px
+}
+
+.profile .my_service .link_note i {
+    width: 20px;
+    height: 15px;
+    background-position: -140px 2px;
+    margin-right: 2px
+}
+
+.profile .my_service .link_mysvc i {
+    width: 45px;
+    height: 15px;
+    background-position: -60px -18px;
+    margin-right: 3px
+}
+
+.profile .my_service .arrow {
+    padding-top: 6px;
+    height: 3px
+}
+
+.profile .my_service .arrow i {
+    width: 5px;
+    height: 3px;
+    background-position: -120px -20px
+}
+
+.profile .my_service .active .arrow i {
+    background-position: -120px -30px
+}
+
+.profile .my_service .link_cover {
+    width: 59px;
+    text-align: center
+}
+
+.bar {
+    width: 1px;
+    height: 16px;
+    background-position: 100% -18px;
+    vertical-align: top;
+    overflow: hidden
+}
+
+:root .profile .btn_logout .btn_inr {
+    padding-top: 1px \0
+}
+
+.profile .service_tab {
+    position: relative;
+    padding-right: 18px;
+    z-index: 30;
+    margin-top: -1px;
+    zoom: 1
+}
+
+.profile .service_tab .slide_cover {
+    overflow: hidden;
+    padding-top: 1px;
+    height: 45px;
+    position: relative;
+    zoom: 1;
+    _width: 100%
+}
+
+.profile .service_tab .slide_btn {
+    position: absolute;
+    right: 0;
+    top: 1px;
+    width: 17px;
+    height: 43px;
+    border-left: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc
+}
+
+.profile .service_tab .btn_next {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    background-color: #e5e7e8
+}
+
+.profile .service_tab .btn_next i {
+    width: 6px;
+    height: 9px;
+    background-position: -181px 0;
+    position: relative;
+    left: 6px;
+    top: 16px;
+    vertical-align: top
+}
+
+.profile .service_tab .active .btn_next i {
+    background-position: -168px 0
+}
+
+.profile .service_tab ul {
+    white-space: nowrap;
+    font-size: 0;
+    vertical-align: top;
+    position: relative;
+    vertical-align: top
+}
+
+.profile .service_tab li {
+    width: 56px;
+    height: 43px;
+    border-bottom: 1px solid #dcdcdc;
+    background-color: #f3f4f3;
+    vertical-align: top;
+    position: relative
+}
+
+.profile .service_tab .tab_front {
+    width: 47px
+}
+
+.profile .service_tab .hover, .profile .service_tab li.selected {
+    border: 1px solid #dcdcdc;
+    border-top: 0;
+    border-bottom: 0;
+    height: 44px;
+    background-color: #fff;
+    margin: 0 -1px;
+    z-index: 10;
+    *left: -1px
+}
+
+.profile .service_tab .hover {
+    border-color: #dadbdc;
+    border-top-color: #d4d5d7;
+    background-color: #ececec;
+    border-bottom: 1px solid #dcdcdc;
+    z-index: 4;
+    height: 43px
+}
+
+.profile .service_tab li a {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    text-decoration: none !important;
+    cursor: pointer
+}
+
+.profile .service_tab li a i {
+    height: 32px;
+    position: relative;
+    top: 5px;
+    cursor: pointer
+}
+
+.profile .service_tab .tab_noti i {
+    width: 17px;
+    background-position: 0 -60px
+}
+
+.profile .service_tab .tab_npay i {
+    width: 42px;
+    background-position: 0 -537px
+}
+
+.profile .service_tab .tab_feed i {
+    width: 18px;
+    background-position: -40px -60px
+}
+
+.profile .service_tab .tab_mail i {
+    width: 16px;
+    background-position: -80px -60px
+}
+
+.profile .service_tab .tab_cafe i {
+    top: 4px;
+    width: 19px;
+    background-position: -120px -59px
+}
+
+.profile .service_tab .tab_blog i {
+    width: 27px;
+    background-position: -160px -60px
+}
+
+.profile .service_tab .tab_post i {
+    width: 27px;
+    background-position: 0 -100px
+}
+
+.profile .service_tab .tab_ndrive i {
+    width: 43px;
+    background-position: -40px -100px
+}
+
+.profile .service_tab .tab_office i {
+    width: 27px;
+    background-position: -100px -100px
+}
+
+.profile .service_tab .tab_calendar i {
+    width: 26px;
+    background-position: -140px -100px
+}
+
+.profile .service_tab .tab_happybean i {
+    width: 26px;
+    background-position: -140px -20px
+}
+
+.profile .service_tab .b_cnt {
+    position: absolute;
+    top: 13px;
+    left: 14px;
+    height: 11px;
+    background-position: -140px -140px;
+    cursor: pointer;
+    line-height: 11px
+}
+
+.profile .service_tab .b_cnt em {
+    height: 11px;
+    background-position: 100% -140px;
+    color: #fff;
+    position: relative;
+    right: -5px;
+    white-space: nowrap;
+    padding: 0 4px 0 3px;
+    *padding-left: 0;
+    text-indent: -4px;
+    font-weight: normal;
+    *text-indent: 0;
+    cursor: pointer
+}
+
+.profile .service_tab .selected .b_cnt {
+    background-position: -140px -300px
+}
+
+.profile .service_tab .selected .b_cnt em {
+    background-position: 100% -300px
+}
+

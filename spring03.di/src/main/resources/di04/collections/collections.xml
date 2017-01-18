@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+
+    <bean id="doc1" class="di00.model.Document">
+        <property name="name" value="a"></property>
+        <property name="location" value="a"></property>
+        <property name="type" ref="atype"></property>
+    </bean>
+    <bean id="atype" class="di00.model.Type">
+        <property name="desc" value="a"></property>
+        <property name="extension" value="a"></property>
+        <property name="name" value="a"></property>
+    </bean>
+    
+
+    <bean id="doc2" class="di00.model.Document">
+        <property name="location" value="bbb"></property>
+        <property name="name" value="bbb"></property>
+        <property name="type">
+            <bean class="di00.model.Type">
+                <constructor-arg name="desc" value="b" />
+                <constructor-arg name="extension" value="b" />
+                <constructor-arg name="name" value="b" />
+            </bean>
+        </property>
+    </bean>
+
+
+    <bean id="doc3" class="di00.model.Document">
+        <constructor-arg name="location" value="ccc" />
+        <constructor-arg name="name" value="ccc" />
+        <constructor-arg name="type" ref="ctype"/>
+    </bean>
+    <bean id="ctype" class="di00.model.Type">
+        <property name="desc" value="c" />
+        <property name="extension" value="c" />
+        <property name="name" value="c" />
+    </bean>
+    
+    
+    <bean id="doc4" class="di00.model.Document">
+        <constructor-arg name="location" value="ddd" />
+        <constructor-arg name="name" value="ddd" />
+        <constructor-arg name="type" >
+            <bean class="di00.model.Type">
+                <constructor-arg name="desc" value="d" />
+                <constructor-arg name="extension" value="d" />
+                <constructor-arg name="name" value="d" />
+            </bean>
+        </constructor-arg>
+    </bean>
+
+    
+    
+    <bean id="pdfType" class="di00.model.Type" scope="singleton">
+        <property name="name" value="PDF" />
+        <property name="desc" value="Portable Document Format" />
+        <property name="extension" value=".pdf" />
+    </bean>
+    
+    <bean id="noteType" class="di00.model.Type" scope="singleton">
+        <property name="name" value="NOTE" />
+        <property name="desc" value="Text Notes" />
+        <property name="extension" value=".txt" />
+    </bean>
+    
+    <bean id="webType" class="di00.model.Type" scope="singleton">
+        <property name="name" value="WEB" />
+        <property name="desc" value="WEB URL" />
+        <property name="extension" value=".url" />
+    </bean>
+    
+    
+
+    <!-- ISearchEngine 인스턴스 정의 -->
+    <bean id="engine" class="di04.collection.AnnotationSearchEngine" scope="singleton">
+        <property name="daoDocument" ref="daoDocument"></property>
+    </bean>
+
+    <!-- IDaoDocumentData 인스턴스 정의 -->
+    <bean id="daoDocument" class="di04.collection.RepositoryDocument" scope="singleton">
+        <property name="docs">
+            <list>
+                <ref bean="doc1" />
+                <ref bean="doc2" />
+                <ref bean="doc3" />
+                <ref bean="doc4" />
+            </list>
+        </property>
+    </bean>
+
+
+    <!-- IDaoTypeData 인스턴스 정의 -->
+    <bean id="daoType" class="di04.collection.RepositoryType" scope="singleton">
+        <property name="types">
+            <map>
+                <entry key="pdfType"  value-ref="pdfType" />
+                <entry key="noteType" value-ref="noteType" />
+                <entry key="webType"  value-ref="webType" />
+            </map>
+        </property>
+    </bean>
+    
+    
+</beans>

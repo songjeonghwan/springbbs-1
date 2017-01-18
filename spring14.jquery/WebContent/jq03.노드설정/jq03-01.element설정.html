@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        button { cursor: pointer;}
+        p { cursor: pointer; width: 500px; }
+        p:hover { background: #c1ceff; }
+        div     { width: 500px; background: yellow; padding-bottom: 5px; }
+        hr      { width: 500px; float: left; }
+        ul      { width: 300px; }
+        .yellow { background: yellow; }
+        .red    { background: red;    }
+        .white  { background: white; cursor:pointer; }
+        .gray   { background: gray;   }
+    </style>
+    <script src="../jquery-3.1.1.js"></script>
+    <script>
+        $(document).ready( function(e){
+        	$('#element_read'  ).click( function(e){ 
+        		var temp = $('.pclick').html();
+        		alert( temp );
+        	});
+        	$('#element_create').click( function(e){ 
+        		$('#result_element').html('<img src="images/im1.jpg" />');
+        	});
+            $('#element_update').click( function(e){ 
+            	var temp = $('p').html();
+            	$('#result_element').html( temp );            	
+            });
+            $('#element_delete').click( function(e){ 
+            	// class gray를 갖고 있는 div를 찾아라.
+            	$('div.gray').html('');
+            	
+                // id result_element를 갖고 있는 div를 찾아라.
+                //$('div#result_element')
+            });
+            
+            $('.text_read'  ).click(function(e){
+            	var temp = $('p.pclick').text();
+            	alert( temp );            	
+            });
+            $('.text_create').click(function(e){
+            	var temp = $(this).text();
+            	temp = temp + ' > 추가';
+            	$(this).text( temp );            	
+            });
+            $('.text_update').click(function(e){ 
+            	var temp = $('.pclick').text();
+            	$(this).text( temp );
+            });
+            $('.text_delete').click(function(e){ 
+            	$(this).text('');
+            });
+        });
+    </script>
+    
+</head>
+<body>
+    <p class="pclick">
+        html()은 엘리먼트의 <span id="tag" class="gray"> 내용을 </span>
+        HTML 형식의<span id="text"> 문자열로 </span> 리턴한다.
+    </p>
+
+    <div>
+        <h3>tag node CRUD</h3>
+        <button id="element_read"  >태그 읽기(R)</button>
+        <button id="element_create">태그 추가(C)</button>
+        <button id="element_update">태그 수정(U)</button>
+        <button id="element_delete">태그 삭제(D)</button>        
+        <div id="result_element" class="gray">
+            aaaaaa
+        </div>
+    </div>
+    <hr>
+
+    <div>
+        <h3>text node CRUD</h3>
+        <ul>
+            <li class="white text_read"  >text 읽기(R)</li>
+            <li class="white text_create">text 추가(C)</li>
+            <li class="white text_update">text 수정(U)</li>
+            <li class="white text_delete">text 삭제(D)</li>
+        </ul>
+    </div>
+</body>
+</html>
+
